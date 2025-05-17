@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dbia7OQfJx8=",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\dotnet\\csharp\\PetFamily\\PetFamily.Backend\\src\\PetFamily.Domain\\PetFamily.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nikita\\.nuget\\packages\\csharpfunctionalextensions\\3.6.0\\csharpfunctionalextensions.3.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

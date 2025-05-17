@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JzsDFoRK+Ic=",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\dotnet\\csharp\\PetFamily\\PetFamily.Backend\\src\\PetFamily.Api\\PetFamily.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nikita\\.nuget\\packages\\csharpfunctionalextensions\\3.6.0\\csharpfunctionalextensions.3.6.0.nupkg.sha512",
+    "C:\\Users\\Nikita\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.3\\microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
+    "C:\\Users\\Nikita\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
