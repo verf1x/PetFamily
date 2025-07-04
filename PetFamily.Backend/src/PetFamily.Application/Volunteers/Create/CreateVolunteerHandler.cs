@@ -1,10 +1,10 @@
 using CSharpFunctionalExtensions;
 using Microsoft.Extensions.Logging;
-using PetFamily.Domain.Entities;
 using PetFamily.Domain.Shared;
-using PetFamily.Domain.ValueObjects;
-using PetFamily.Domain.ValueObjects.Pet;
-using PetFamily.Domain.ValueObjects.Volunteer;
+using PetFamily.Domain.Shared.EntityIds;
+using PetFamily.Domain.Shared.ValueObjects;
+using PetFamily.Domain.Volunteers.Entities;
+using PetFamily.Domain.Volunteers.ValueObjects;
 
 namespace PetFamily.Application.Volunteers.Create;
 

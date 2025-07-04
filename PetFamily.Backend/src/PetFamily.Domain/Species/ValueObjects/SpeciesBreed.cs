@@ -1,7 +1,8 @@
 using CSharpFunctionalExtensions;
 using PetFamily.Domain.Shared;
+using PetFamily.Domain.Shared.EntityIds;
 
-namespace PetFamily.Domain.Species;
+namespace PetFamily.Domain.Species.ValueObjects;
 
 public record SpeciesBreed
 {

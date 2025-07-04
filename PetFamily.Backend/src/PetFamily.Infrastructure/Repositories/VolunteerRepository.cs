@@ -1,9 +1,10 @@
 using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
 using PetFamily.Application.Volunteers;
-using PetFamily.Domain.Entities;
 using PetFamily.Domain.Shared;
-using PetFamily.Domain.ValueObjects.Volunteer;
+using PetFamily.Domain.Shared.EntityIds;
+using PetFamily.Domain.Shared.ValueObjects;
+using PetFamily.Domain.Volunteers.Entities;
 
 namespace PetFamily.Infrastructure.Repositories;
 

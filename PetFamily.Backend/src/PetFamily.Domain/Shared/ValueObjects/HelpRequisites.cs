@@ -1,4 +1,4 @@
-namespace PetFamily.Domain.ValueObjects.Pet;
+namespace PetFamily.Domain.Shared.ValueObjects;
 
 public record HelpRequisites
 {

@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 using CSharpFunctionalExtensions;
 using PetFamily.Domain.Shared;
 
-namespace PetFamily.Domain.ValueObjects.Pet;
+namespace PetFamily.Domain.Volunteers.ValueObjects;
 
 public record Address
 {

@@ -1,14 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PetFamily.Domain.Entities;
 using PetFamily.Domain.Shared;
+using PetFamily.Domain.Shared.EntityIds;
 using PetFamily.Domain.Species;
 
 namespace PetFamily.Infrastructure.Configurations;
 
-public class SpeciesConfiguration : IEntityTypeConfiguration<PetSpecies>
+public class SpeciesConfiguration : IEntityTypeConfiguration<Species>
 {
-    public void Configure(EntityTypeBuilder<PetSpecies> builder)
+    public void Configure(EntityTypeBuilder<Species> builder)
     {
         builder.ToTable("species");
         
