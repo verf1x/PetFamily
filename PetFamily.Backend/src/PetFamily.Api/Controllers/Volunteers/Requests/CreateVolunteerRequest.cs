@@ -1,6 +1,6 @@
 using PetFamily.Application.Dtos;
 using PetFamily.Application.Dtos.Volunteer;
-using PetFamily.Application.Volunteers.Create;
+using PetFamily.Application.VolunteersManagement.UseCases.Create;
 
 namespace PetFamily.Api.Controllers.Volunteers.Requests;
 

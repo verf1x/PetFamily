@@ -1,5 +1,5 @@
 using PetFamily.Application.Dtos;
-using PetFamily.Application.Volunteers.UploadPetPhotos;
+using PetFamily.Application.VolunteersManagement.UseCases.UploadPetPhotos;
 
 namespace PetFamily.Api.Controllers.Volunteers.Requests;
 

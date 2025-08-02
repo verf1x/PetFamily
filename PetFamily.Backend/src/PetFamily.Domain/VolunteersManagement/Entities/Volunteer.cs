@@ -27,13 +27,7 @@ public class Volunteer : SoftDeletableEntity<VolunteerId>
 
     public IReadOnlyList<Pet> Pets => _pets;
 
-    public IReadOnlyList<Pet> PetsNeedsHelp => GetPetsNeedsHelp();
-
-    public IReadOnlyList<Pet> PetsLookingForHome => GetPetsLookingForHome();
-
-    public IReadOnlyList<Pet> PetsFoundHome => GetPetsFoundHome();
-
-    // ef core ctor
+    // ef core
     private Volunteer(VolunteerId id) : base(id) { }
 
     public Volunteer(
@@ -43,8 +37,8 @@ public class Volunteer : SoftDeletableEntity<VolunteerId>
         Description description,
         Experience experience,
         PhoneNumber phoneNumber,
-        IReadOnlyList<SocialNetwork> socialNetworks,
-        IReadOnlyList<HelpRequisite> helpRequisites) : base(id)
+        List<SocialNetwork> socialNetworks,
+        List<HelpRequisite> helpRequisites) : base(id)
     {
         FullName = fullName;
         Email = email;
@@ -73,7 +67,7 @@ public class Volunteer : SoftDeletableEntity<VolunteerId>
         if (serialNumberResult.IsFailure)
             return serialNumberResult.Error;
 
-        pet.SetSerialNumber(serialNumberResult.Value);
+        pet.SetPosition(serialNumberResult.Value);
 
         _pets.Add(pet);
 
@@ -113,9 +107,7 @@ public class Volunteer : SoftDeletableEntity<VolunteerId>
             {
                 var result = petToMove.MoveForward();
                 if (result.IsFailure)
-                {
                     return result.Error;
-                }
             }
         }
         else if (newPosition > currentPosition)
@@ -127,9 +119,7 @@ public class Volunteer : SoftDeletableEntity<VolunteerId>
             {
                 var result = petToMove.MoveBackward();
                 if (result.IsFailure)
-                {
                     return result.Error; 
-                }
             }
         }
 

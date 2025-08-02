@@ -6,8 +6,7 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-Log.Logger = LoggerConfigurationFactory.Create(
-    builder.GetSeqConnectionString());
+Log.Logger = LoggerConfigurationFactory.Create(builder.GetSeqConnectionString());
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

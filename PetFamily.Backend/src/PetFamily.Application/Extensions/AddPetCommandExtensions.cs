@@ -1,6 +1,6 @@
 using CSharpFunctionalExtensions;
 using PetFamily.Application.Dtos;
-using PetFamily.Application.FileProvider;
+using PetFamily.Application.Files;
 using PetFamily.Domain.Shared;
 using PetFamily.Domain.VolunteersManagement.ValueObjects;
 
@@ -16,7 +16,7 @@ public static class AddPetCommandExtensions
         {
             var extension = Path.GetExtension(file.FileName);
 
-            var pathResult = PhotoPath.Create(Guid.NewGuid(), extension);
+            var pathResult = FilePath.Create(Guid.NewGuid(), extension);
             if (pathResult.IsFailure)
                 return pathResult.Error;
 

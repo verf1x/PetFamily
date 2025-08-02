@@ -31,11 +31,11 @@ public static class Errors
         }
     }
 
-    public static class Module
+    public static class Volunteer
     {
         public static Error AlreadyExists()
         {
-            return Error.Validation("record.already.exists", $"Module already exists", null);
+            return Error.Validation("record.already.exists", $"Volunteer already exists", null);
         }
     }
 }

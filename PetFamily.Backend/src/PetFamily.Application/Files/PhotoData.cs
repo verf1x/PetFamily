@@ -1,5 +1,5 @@
 using PetFamily.Domain.VolunteersManagement.ValueObjects;
 
-namespace PetFamily.Application.FileProvider;
+namespace PetFamily.Application.Files;
     
-public record PhotoData(Stream Stream, PhotoPath Path);
+public record PhotoData(Stream Stream, FilePath Path);
