@@ -4,13 +4,14 @@ using PetFamily.Domain.Shared.EntityIds;
 using PetFamily.Domain.Shared.ValueObjects;
 using PetFamily.Domain.VolunteersManagement.Enums;
 using PetFamily.Domain.VolunteersManagement.ValueObjects;
+using File = PetFamily.Domain.VolunteersManagement.ValueObjects.File;
 
 namespace PetFamily.Domain.VolunteersManagement.Entities;
 
 public class Pet : SoftDeletableEntity<PetId>
 {
     private readonly List<HelpRequisite> _helpRequisites = null!;
-    private readonly List<Photo> _photos = null!;
+    private readonly List<File> _photos = null!;
     
     public Nickname Nickname { get; private set; } = null!;
 
@@ -36,11 +37,11 @@ public class Pet : SoftDeletableEntity<PetId>
 
     public IReadOnlyList<HelpRequisite> HelpRequisites => _helpRequisites;
 
-    public IReadOnlyList<Photo> Photos => _photos;
+    public IReadOnlyList<File> Photos => _photos;
     
     public DateTime CreatedAt { get; private set; }
     
-    // ef core ctor
+    // ef core
     private Pet(PetId id) : base(id) { }
 
     public Pet(
@@ -56,7 +57,7 @@ public class Pet : SoftDeletableEntity<PetId>
         DateOnly dateOfBirth,
         HelpStatus helpStatus,
         List<HelpRequisite> helpRequisites,
-        List<Photo> photos) : base(id)
+        List<File> photos) : base(id)
     {
         Nickname = nickname;
         Description = description;
@@ -73,22 +74,20 @@ public class Pet : SoftDeletableEntity<PetId>
         CreatedAt = DateTime.UtcNow;
     }
     
-    public void AddPhotos(List<Photo> photos)
+    public void AddPhotos(List<File> photos)
     {
         foreach (var photo in photos)
-        {
             if(!_photos.Contains(photo))
                 _photos.Add(photo);
-        }
     }
     
-    public void RemovePhotos(List<Photo> photos)
+    public void RemovePhotos(List<File> photos)
     {
         foreach (var photo in photos)
             _photos.Remove(photo);
     }
     
-    public void SetSerialNumber(Position position)
+    public void SetPosition(Position position)
     {
         Position = position;
     }
